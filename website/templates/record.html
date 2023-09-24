@@ -1,0 +1,131 @@
+{% extends 'base.html'%} {%block content%}
+<div class="col-md-6 offset-md-3">
+  <h2>Customer Record:</h2>
+
+  <div class="card mb-7">
+    <div class="card-header">
+      {{customer_record.first_name}} {{customer_record.last_name}}
+    </div>
+    <div class="card-body">
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default"
+          >Email</span
+        >
+        <input
+          type="text"
+          class="form-control"
+          aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default"
+          readonly
+          placeholder="{{customer_record.email}}"
+        />
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default"
+          >Phone</span
+        >
+        <input
+          type="text"
+          class="form-control"
+          aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default"
+          readonly
+          placeholder="{{customer_record.phone}}"
+        />
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default"
+          >City</span
+        >
+        <input
+          type="text"
+          class="form-control"
+          aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default"
+          readonly
+          placeholder="{{customer_record.city}}"
+        />
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default"
+          >Address</span
+        >
+        <input
+          type="text"
+          class="form-control"
+          aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default"
+          readonly
+          placeholder="{{customer_record.address}}"
+        />
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default"
+          >Created At</span
+        >
+        <input
+          type="text"
+          class="form-control"
+          aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default"
+          readonly
+          placeholder="{{customer_record.created_at}}"
+        />
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default"
+          >State</span
+        >
+        <input
+          type="text"
+          class="form-control"
+          aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default"
+          readonly
+          placeholder="{{customer_record.state}}"
+        />
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default"
+          >Zipcode</span
+        >
+        <input
+          type="text"
+          class="form-control"
+          aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default"
+          readonly
+          placeholder="{{customer_record.zipcode}}"
+        />
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">ID</span>
+        <input
+          type="text"
+          class="form-control"
+          aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default"
+          readonly
+          placeholder="{{customer_record.id}}"
+        />
+      </div>
+    </div>
+    <div class="card-footer">
+      <a href="{%url 'home'%}" class="btn btn-primary">Back</a>
+      <a
+        href="{%url 'delete_record' customer_record.id %}"
+        class="btn btn-danger"
+        >Delete</a
+      >
+      <a
+        href="{%url 'update_record' customer_record.id%}"
+        class="btn btn-warning"
+        >Update Record</a
+      >
+      <a
+    </div>
+  </div>
+</div>
+<!-- <div class="mt-3"></div> -->
+
+{%endblock%}
